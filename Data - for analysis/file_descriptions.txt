@@ -1,0 +1,20 @@
+*Core data files*
+
+Midnight_Rules_Election_to_Inauguration: contains all midnight rules for Clinton, Bush, Obama, Trump from election day to the inauguration day of the new President
+
+Raw_Rules: contains all of the rules in the first 100 days for Bush, Obama, Trump, Biden with the column search assignments as an additional column
+
+Raw_Rules_Ver2: contains the same contents as Raw_Rules but uses an alternative column search method code
+
+Suspended_Rules: contains all of the rules identified as regulatory suspensions by the column search method
+
+Suspended_Rules_Ver2: contains the same contents as Suspended_Rules but based an alternative column search method
+
+
+*Sampled data for robustness checks*
+
+Sample_Non_Suspended_Rules: a sample of the rules not identified by the column search method to be regulatory suspensions, was used for robustness check
+
+Sample_Raw_Rules: a sample of the rules from the Raw_Rules file, was used for robustness check
+
+Sample_Suspended_Rules: a sample of regulatory suspensions identified by the column search method, was used for robustness check
