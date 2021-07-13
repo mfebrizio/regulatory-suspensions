@@ -39,9 +39,15 @@ The subfolder *Data - for analysis* contains data produced for analysis. Specifi
 - list the midnight rules issued between election day and inauguration day at the end of the prior administration
 - provide the samples used in the subfolder *Method - Robustness checks*
 
+*Next Steps:*
+- Refine the column search method for identifying regulatory suspensions to eliminate all false positives.
+
 
 **--------------**
 
-*Contributors:* Mark Febrizio & Kekai Liu
+*Publications:*
+- Febrizio, Mark & Kekai Liu (2021). "[The Frequency of Regulatory Suspensions in the 21st Century](https://regulatorystudies.columbian.gwu.edu/frequency-regulatory-suspensions-21st-century)," GW Regulatory Studies Center, July 13, 2021.
+
+*Repository contributors:* Mark Febrizio & Kekai Liu
 
 Please reach out to Mark with any questions: mfebrizio at gwu dot edu
