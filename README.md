@@ -39,6 +39,9 @@ The subfolder *Data - for analysis* contains data produced for analysis. Specifi
 - list the midnight rules issued between election day and inauguration day at the end of the prior administration
 - provide the samples used in the subfolder *Method - Robustness checks*
 
+
+**--------------**
+
 *Contributors:* Mark Febrizio & Kekai Liu
 
 Please reach out to Mark with any questions: mfebrizio at gwu dot edu
