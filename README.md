@@ -1,10 +1,10 @@
 # regulatory-suspensions
 
-*Overview:*
+## Overview
 
 [Regulatory suspensions](https://www.theregreview.org/2020/03/16/davis-noll-revesz-regulatory-rollbacks-changed-nature-presidential-power/) "defer compliance by either postponing the compliance dates or putting off a regulation’s effective date, prior to working to change or repeal the regulation’s substantive requirements." Suspensions are one of [several mechanisms](https://regulatorystudies.columbian.gwu.edu/biden-using-multiple-mechanisms-reverse-trumps-regulatory-agenda) that incoming presidents use to reverse the regulatory agenda of the prior administration. Federal agencies publish these postponements in the [Federal Register](https://www.federalregister.gov/), the daily journal of the US government. Understanding the frequency of regulatory suspensions across presidential administrations may help contextualize the usage of this tool of regulatory oversight. Our objective is to identify regulatory suspensions and analyze how presidential administrations use them differently.
 
-*Data & Methods:*
+## Data & Methods
 
 Using the [Federal Register API](https://www.federalregister.gov/developers/documentation/api/v1), we searched final rules from the beginning of each president’s first term for keywords that indicate a rule’s effective date or compliance date was delayed. Specifically, if a rule contained the words "delay" and either "effective date" or "compliance date," we flagged it as a regulatory suspension. Searching the full text of documents proved to be overly inclusive (i.e., picking up many false positives), so instead we focused on searching three particular fields from the Federal Register API -- *title*, *action*, and *dates* -- for those terms. We limited our timeframe to roughly the first 100 days of each president’s first term -- January 20 to April 30 -- because this would capture a substantial chunk of the initial regulatory activity of a new administration and ensured that we had enough data for Joe Biden’s first year in office. Since document-level data from the Federal Register only date back to 1994, we stop our search for regulatory suspensions at the George W. Bush administration.
 
@@ -12,7 +12,7 @@ We conducted three robustness checks to verify the accuracy of our search method
 
 While conducting accuracy checks, we noticed that some regulatory actions delayed the effective date for multiple rules. In the *action* and *dates* columns, the multiple-rule suspensions would typically say "delay of effective dates" rather than "delay of effective date," as well as refer to "each regulation." To identify multiple-rule suspensions, we searched the 227 regulatory actions containing suspensions using a regex search for "\bdates\b|\beach\b" (i.e., "dates" or "each" with word boundaries at the beginning and end) in either the *dates* or *action* columns. We manually read the flagged regulatory actions, determined how many suspensions each included, and revised the data accordingly.
 
-*Repository Contents:*
+## Repository Contents
 
 The subfolder *Data - Federal Register API* contains Python code to retrieve the raw data from the Federal Register and conduct some initial processing. Specifically, the files: 
 - retrieve the population of rules published at the beginning of each presidential administration (January 20 to April 30)
@@ -39,14 +39,18 @@ The subfolder *Data - for analysis* contains data produced for analysis. Specifi
 - list the midnight rules issued between election day and inauguration day at the end of the prior administration
 - provide the samples used in the subfolder *Method - Robustness checks*
 
-*Next Steps:*
-- Refine the column search method for identifying regulatory suspensions to eliminate all false positives.
+## Next Steps
+
+Refine the column search method for identifying regulatory suspensions to eliminate all false positives.
 
 
 **--------------**
 
+*Further Reading:*
+- Davis Noll, Bethany and Revesz, Richard L., Regulation in Transition (November 21, 2019). Minnesota Law Review, Vol. 104, 2019, NYU School of Law, Public Law Research Paper No. 19-17, NYU Law and Economics Research Paper No. 19-11, Available at SSRN: https://ssrn.com/abstract=3348569 or http://dx.doi.org/10.2139/ssrn.3348569.
+
 *Publications:*
-- Febrizio, Mark & Kekai Liu (2021). "[The Frequency of Regulatory Suspensions in the 21st Century](https://regulatorystudies.columbian.gwu.edu/frequency-regulatory-suspensions-21st-century)," GW Regulatory Studies Center, July 13, 2021.
+- Febrizio, Mark & Kekai Liu (2021). "[The Frequency of Regulatory Suspensions in the 21st Century](https://regulatorystudies.columbian.gwu.edu/frequency-regulatory-suspensions-21st-century)," GW Regulatory Studies Center *Insight*, July 13, 2021.
 
 *Repository contributors:* Mark Febrizio & Kekai Liu
 
