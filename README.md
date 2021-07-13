@@ -32,11 +32,13 @@ The subfolder *Method - Robustness checks* contains R code for conducting accura
 - sample 5 percent of the rules from each President identified as non-suspensions via the search method (159 out of 3148 rules)
 - calculate the accuracy rate for each sample
 
-The subfolder *Data - for analysis* contains data for 
-Specifically, the files:
+The subfolder *Data - for analysis* contains data produced for analysis. Specifically, the files:
 - provide text descriptions for each file
 - list the rules issued in the first 100 days of each administration
 - list the rules containing regulatory suspensions in the first 100 days of each administration
 - list the midnight rules issued between election day and inauguration day at the end of the prior administration
 - provide the samples used in the subfolder *Method - Robustness checks*
 
+*Contributors:* Mark Febrizio & Kekai Liu
+
+Please reach out to Mark with any questions: mfebrizio at gwu dot edu
