@@ -14,4 +14,29 @@ While conducting accuracy checks, we noticed that some regulatory actions delaye
 
 *Repository Contents:*
 
-TBD
+The subfolder *Data - Federal Register API* contains Python code to retrieve the raw data from the Federal Register and conduct some initial processing. Specifically, the files: 
+- retrieve the population of rules published at the beginning of each presidential administration (January 20 to April 30)
+- identify and filter out rules issued by the outgoing president that were published on or after January 20
+- retrieve the population of midnight rules published at the end of the previous presidential administration (election day to inauguration day)
+- export the data on midnight rules for each president
+
+The subfolder *Method - Identifying rules* contains Python and R code for identifying regulatory suspensions from the population of regulations. Specifically, the files:
+- provide one method for identifying regulatory suspensions
+- provide a second method for identifying regulatory suspensions (with identical results)
+- identify and count the number of midnight rules for each presidential administration
+- identifying actions that contain multiple-rule suspensions
+
+The subfolder *Method - Robustness checks* contains R code for conducting accuracy checks on the method for identifying regulatory suspensions. Specifically, the files:
+- sample 5 percent of the total rules published in the time period from each president (171 out of 3375 rules) 
+- sample 50 percent of the identified suspensions from each president (115 out of 227 rules)
+- sample 5 percent of the rules from each President identified as non-suspensions via the search method (159 out of 3148 rules)
+- calculate the accuracy rate for each sample
+
+The subfolder *Data - for analysis* contains data for 
+Specifically, the files:
+- provide text descriptions for each file
+- list the rules issued in the first 100 days of each administration
+- list the rules containing regulatory suspensions in the first 100 days of each administration
+- list the midnight rules issued between election day and inauguration day at the end of the prior administration
+- provide the samples used in the subfolder *Method - Robustness checks*
+
