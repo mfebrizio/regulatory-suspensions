@@ -43,15 +43,16 @@ The subfolder *Data - for analysis* contains data produced for analysis. Specifi
 
 Refine the column search method for identifying regulatory suspensions to eliminate all false positives.
 
-
-**--------------**
+---------------------------
+## Supplemental Information
+---------------------------
 
 *Further Reading:*
 - Davis Noll, Bethany and Revesz, Richard L., Regulation in Transition (November 21, 2019). Minnesota Law Review, Vol. 104, 2019, NYU School of Law, Public Law Research Paper No. 19-17, NYU Law and Economics Research Paper No. 19-11, Available at SSRN: https://ssrn.com/abstract=3348569 or http://dx.doi.org/10.2139/ssrn.3348569.
 
-*Publications:*
+*Research Publications:*
 - Febrizio, Mark & Kekai Liu (2021). "[The Frequency of Regulatory Suspensions in the 21st Century](https://regulatorystudies.columbian.gwu.edu/frequency-regulatory-suspensions-21st-century)," GW Regulatory Studies Center *Insight*, July 13, 2021.
 
 *Repository contributors:* Mark Febrizio & Kekai Liu
 
-Please reach out to Mark with any questions: mfebrizio at gwu dot edu
+*Contact:* Please reach out to Mark via mfebrizio at gwu dot edu
