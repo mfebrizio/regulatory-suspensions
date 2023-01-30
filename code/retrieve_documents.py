@@ -1,6 +1,6 @@
 """
 Mark Febrizio
-Last revised: 2022-08-16
+Last revised: 2023-01-30
 """
 
 # --------------------------------------------------
@@ -8,7 +8,7 @@ Last revised: 2022-08-16
 import json
 from pathlib import Path
 
-from federal_register_api import query_endpoint_public_inspection
+from modules.federal_register_api import query_endpoint_documents
 
 p = Path(__file__)
 data_dir = p.parents[1].joinpath("data", "raw")
@@ -22,13 +22,13 @@ else:
 
 # --------------------------------------------------
 # retrieve data from API
-dctsRules = query_endpoint_public_inspection()
+years = list(range(1994,2023))
+documents = query_endpoint_documents(years)
 
 # --------------------------------------------------
 # export json file
-file_path = data_dir / r"public_inspection_endpoint_midnight_documents.json"
-with open(file_path, "w", encoding="utf-8") as outfile:
-    json.dump(dctsRules, outfile, indent=4)
-
+file_path = data_dir / fr"documents_endpoint_{years[0]}_{years[-1]}.json"
+with open(file_path, "w", encoding="utf-8") as f:
+    json.dump(documents, f, indent=4)
 print("Exported as JSON!")
 
