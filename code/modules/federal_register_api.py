@@ -68,7 +68,7 @@ class AgencyMetadata:
             json.dump(dict_metadata, f, indent=4)
 
 
-def query_endpoint_agencies(endpoint_url:str = r"https://www.federalregister.gov/api/v1/agencies.json"):
+def query_endpoint_agencies(endpoint_url: str = r"https://www.federalregister.gov/api/v1/agencies.json"):
     """Queries the GET agencies endpoint of the Federal Register API.
     Retrieve agencies metadata. After defining endpoint url, no parameters are needed.
 
@@ -90,12 +90,22 @@ def query_endpoint_agencies(endpoint_url:str = r"https://www.federalregister.gov
     return agencies_response.json()
 
 
-def query_endpoint_documents(yearsList: list = [], 
+def query_endpoint_documents(yearsList: list, 
                              doctypeList: list = ["RULE", "PRORULE", "NOTICE"], 
+                             fieldsList: list = ["publication_date", "president", 
+                                                 "agencies", "agency_names", 
+                                                 "document_number", "citation", 
+                                                 "title", "type", 
+                                                 "action", "dates", 
+                                                 "abstract", "json_url", 
+                                                 "correction_of", "corrections"], 
                              endpoint_url: str = r"https://www.federalregister.gov/api/v1/documents.json?"):
     """Queries the GET documents.{format} endpoint of the Federal Register API.
 
     Args:
+        yearsList (list): Years when documents were published. API only dates back to 1994.
+        doctypeList (list, optional): Document types to return in request. Defaults to ["RULE", "PRORULE", "NOTICE"].
+        fieldsList (list, optional): Fields to return for each document. Defaults to ["publication_date", "president", "agencies", "agency_names", "document_number", "citation", "title", "type", "action", "dates", "abstract", "json_url", "correction_of", "corrections"].
         endpoint_url (str, optional): Endpoint for retrieving documents. Defaults to r"https://www.federalregister.gov/api/v1/documents.json?".
 
     Returns:
@@ -106,11 +116,6 @@ def query_endpoint_documents(yearsList: list = [],
     res_per_page = 1000
     page_offset = 0  # both 0 and 1 return first page
     order = "oldest"
-    fieldsList = ["publication_date", "president", "agencies", "agency_names", 
-                  "document_number", "citation", "title", 
-                  "type", "action", "dates", "abstract", 
-                  "json_url", "correction_of", "corrections"
-                  ]
 
     # dictionary of parameters
     dict_params = {"per_page": res_per_page,
