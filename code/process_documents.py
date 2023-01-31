@@ -10,9 +10,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from federal_agencies import clean_agencies_column
-from columns_to_date import column_to_date
-from search_columns import search_columns
+from modules.federal_agencies import clean_agencies_column
+from modules.columns_to_date import column_to_date
+from modules.search_columns import search_columns
 
 p = Path(__file__)
 read_dir = p.parents[1].joinpath("data", "raw")
