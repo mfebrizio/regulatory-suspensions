@@ -1,6 +1,6 @@
 """
 Mark Febrizio
-Last revised: 2022-09-22
+Last revised: 2023-01-31
 """
 
 # %% Initialize
@@ -10,9 +10,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from modules.federal_agencies import clean_agencies_column
-from modules.columns_to_date import column_to_date
-from modules.search_columns import search_columns
+from preprocessing import clean_agencies_column, column_to_date
+from search_columns import search_columns
+from utils import load_csv, load_json
 
 p = Path(__file__)
 read_dir = p.parents[1].joinpath("data", "raw")
@@ -29,15 +29,12 @@ else:
 # %% Load data
 
 # public inspection data
-file_path = read_dir / r"public_inspection_endpoint_midnight_documents.json"
-with open(file_path, "r", encoding="utf-8") as f:
-    data = json.load(f)
-df = pd.DataFrame(data["results"])
+file_name = r"public_inspection_endpoint_midnight_documents.json"
+df = load_json(file_name, read_dir)
 
 # agencies metadata
-file_path = read_dir / r"agencies_endpoint_metadata.json"
-with open(file_path, "r", encoding="utf-8") as f:
-    metadata = json.load(f)["results"]
+file_name = r"agencies_endpoint_metadata.json"
+metadata = load_json(file_name, read_dir)
 
 
 # %% Data cleaning
