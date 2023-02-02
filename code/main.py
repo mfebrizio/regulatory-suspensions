@@ -53,19 +53,25 @@ def process_documents():
     pass
     # Load data
     df = load_json(FILE_ALL_DATA_RAW, raw_dir)  # federal register documents
-    metadata = load_json(FILE_AGENCIES_METADATA, raw_dir)  # agencies metadata
+    agencies_metadata = load_json(FILE_AGENCIES_METADATA, raw_dir)  # agencies metadata
 
-    # Data cleaning
-    df = df.drop_duplicates(subset="document_number", keep="first")  # filter out duplicates
-    if "agencies_id_unique" in df.columns:  # clean up API columns
-        pass
-    else:
-        df = clean_agencies_column(df, metadata=metadata)
+    # Data cleaning #
     
-    df.loc[:, "date"] = column_to_date(df, column="public_inspection_issue_date")
+    # filter out duplicates
+    df = df.drop_duplicates(subset="document_number", keep="first")
+    
+    # format dates; create column for year
+    df.loc[:, "date"] = column_to_date(df, column="publication_date")
     df.loc[:, "year"] = df["date"].apply(lambda x: x.year)
     
-    #df.loc[]
+    # clean president identifier
+    df = clean_president_column(df)
+    
+    # clean up agencies column from API
+    if "agencies_id_unique" in df.columns:
+        pass
+    else:
+        df = clean_agencies_column(df, metadata=agencies_metadata)
     
     # clean agency info for export
     df.loc[:, "agency_names"] = df["agency_names"].apply(lambda x: "; ".join(x))
