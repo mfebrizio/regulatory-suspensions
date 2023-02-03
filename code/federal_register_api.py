@@ -90,7 +90,44 @@ def query_endpoint_agencies(endpoint_url: str = r"https://www.federalregister.go
     return agencies_response.json()
 
 
-def query_endpoint_documents(yearsList: list, 
+def get_documents(endpoint_url: str, dict_params: dict):
+    """_summary_
+
+    Args:
+        endpoint_url (str): _description_
+        dict_params (dict): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    dctsResults = []
+    dctsCount = 0
+    dcts_response = requests.get(endpoint_url, params=dict_params)
+    if dcts_response.json()["count"] != 0:
+        
+        # set variables
+        dctsCount += dcts_response.json()["count"]
+        
+        try:  # for days with multiple pages of results
+            dctsPages = dcts_response.json()["total_pages"]  # number of pages to retrieve all results
+            
+            # for loop for grabbing results from each page
+            for page in range(1, dctsPages + 1):
+                dict_params.update({"page": page})
+                dcts_response = requests.get(endpoint_url, params=dict_params)
+                results_this_page = dcts_response.json()["results"]
+                dctsResults.extend(results_this_page)
+                #print(f"Number of results retrieved = {len(dctsResults)}")
+        
+        except:  # when only one page of results
+            results_this_page = dcts_response.json()["results"]
+            dctsResults.extend(results_this_page)
+            #print(f"Number of results retrieved = {len(dctsResults)}")
+        
+    return dctsResults, dctsCount
+
+
+def query_endpoint_documents(yearsList: list,  
                              doctypeList: list = ["RULE", "PRORULE", "NOTICE"], 
                              fieldsList: list = ["publication_date", "president", 
                                                  "agencies", "agency_names", 
@@ -99,7 +136,9 @@ def query_endpoint_documents(yearsList: list,
                                                  "action", "dates", 
                                                  "abstract", "json_url", 
                                                  "correction_of", "corrections"], 
-                             endpoint_url: str = r"https://www.federalregister.gov/api/v1/documents.json?"):
+                             endpoint_url: str = r"https://www.federalregister.gov/api/v1/documents.json?", 
+                             increment_by_quarter: bool = True
+                             ):
     """Queries the GET documents.{format} endpoint of the Federal Register API.
 
     Args:
@@ -122,7 +161,6 @@ def query_endpoint_documents(yearsList: list,
                    "page": page_offset,
                    "order": order, 
                    "fields[]": fieldsList, 
-                   "conditions[publication_date][year]": "", 
                    "conditions[type][]": doctypeList
                    }
 
@@ -131,50 +169,44 @@ def query_endpoint_documents(yearsList: list,
     # create objects
     dctsResults_all = []
     dctsCount_all = 0
-
+    
     # for loop to pull data for each publication year
     for year in yearsList:
-        print(f"\n***** Retrieving results for midnight period = {year} *****")
+        print(f"\n***** Retrieving results for time period = {year} *****")
 
         dctsResults = []
         dctsCount = 0
         
-        # update parameters for year
-        dict_params.update({"conditions[publication_date][year]": year})
-
-        # get documents
-        dcts_response = requests.get(endpoint_url, params=dict_params)
-        print(dcts_response.status_code,
-                dcts_response.headers["date"],
-                dcts_response.url, sep="\n")  # print request URL
-        
-        if dcts_response.json()["count"] != 0:
+        # update date parameters
+        if increment_by_quarter:
+            # format: YYYY-MM-DD
+            quarter_tuples = [("01-01", "03-31"), ("04-01", "06-30"), 
+                              ("07-01", "09-30"), ("10-01", "12-31")]
             
-            # set variables
-            dctsCount += dcts_response.json()["count"]
-            
-            try:  # for days with multiple pages of results
-                dctsPages = dcts_response.json()["total_pages"]  # number of pages to retrieve all results
-                
-                # for loop for grabbing results from each page
-                for page in range(1, dctsPages + 1):
-                    dict_params.update({"page": page})
-                    dcts_response = requests.get(endpoint_url, params=dict_params)
-                    results_this_page = dcts_response.json()["results"]
-                    dctsResults.extend(results_this_page)
-                    print(f"Number of results retrieved = {len(dctsResults)}")
-            
-            except:  # when only one page of results
-                results_this_page = dcts_response.json()["results"]
-                dctsResults.extend(results_this_page)
-                print(f"Number of results retrieved = {len(dctsResults)}")
-
-        # create dictionary for year to export as json
-        if len(dctsResults) == dctsCount:
-            pass
-
+            for quarter in quarter_tuples:            
+                dctsResults_qrt = []
+                dctsCount_qrt = 0
+                # update parameters by quarter
+                dict_params.update({"conditions[publication_date][gte]": f"{year}-{quarter[0]}", 
+                                    "conditions[publication_date][lte]": f"{year}-{quarter[1]}"}
+                                   )
+                # get documents
+                dctsResults_qrt, dctsCount_qrt = get_documents(endpoint_url, dict_params)
+                dctsResults.extend(dctsResults_qrt)
+                dctsCount += dctsCount_qrt
         else:
-            print(f"Counts do not align for {year}: {len(dctsResults)}  =/= {dctsCount}")
+            # update parameters by year
+            dict_params.update({"conditions[publication_date][year]": year})
+            
+            # get documents
+            dctsResults, dctsCount = get_documents(endpoint_url, dict_params)
+
+        # print progress
+        print(f"Number of results retrieved = {len(dctsResults)}")
+        
+        # raise error if documents fitting criteria are not retrieved
+        if len(dctsResults) != dctsCount:
+            raise Exception(f"Counts do not align for {year}: {len(dctsResults)}  =/= {dctsCount}")
 
         # extend list of cumulative results and counts
         dctsResults_all.extend(dctsResults)
