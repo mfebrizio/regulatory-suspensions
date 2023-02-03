@@ -16,8 +16,12 @@ def clean_president_column(df_input: DataFrame,
     # create deep copy of input dataframe
     df = df_input.copy(deep=True)
     
+    # handle missing values
+    bool_mi = df["president"].isna()
+    df.loc[bool_mi, "president"] = df["president"].interpolate('pad').loc[bool_mi]
+    
     # extract president identifier
-    df["president_id"] = df.apply(lambda x: x[column]["identifier"], axis=1)
+    df["president_id"] = df.apply(lambda x: x[column].get("identifier"), axis=1)
     president_list = list(set(df["president_id"].values.tolist()))
     print(", ".join(president_list))
 
