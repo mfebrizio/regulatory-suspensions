@@ -1,5 +1,5 @@
 # import dependencies
-from pandas import Series, DataFrame
+from pandas import Series, DataFrame, to_datetime
 
 
 # function that converts single column from a dataframe into date format
@@ -17,7 +17,7 @@ def column_to_date(df: DataFrame, column: str = ''):
     df_copy = df.copy(deep=True)
     
     # convert to datetime format
-    df_copy.loc[:, column] = pd.to_datetime(df_copy[column])
+    df_copy.loc[:, column] = to_datetime(df_copy[column])
         
     # convert to date format (removes timestamp info)
     df_copy.loc[:, column] = df_copy[column].apply(lambda x: x.date())
@@ -43,7 +43,7 @@ def columns_to_date(df: DataFrame, columns: list = []):
     # loop over input columns
     for c in columns:
         # convert to datetime format
-        df_copy.loc[:,c] = pd.to_datetime(df_copy[c])
+        df_copy.loc[:,c] = to_datetime(df_copy[c])
         
         # convert to date format (removes timestamp info)
         df_copy.loc[:,c] = df_copy[c].apply(lambda x: x.date())
