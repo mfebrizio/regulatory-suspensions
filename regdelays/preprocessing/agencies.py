@@ -497,7 +497,7 @@ def clean_agencies_column(df_input: DataFrame,
     
     # loop over documents and extract agencies data
     for rule in agencies_list:
-        slug_list.append(x.get('slug', x['raw_name'].lower().replace(" ","-")) for x in rule)
+        slug_list.append(x.get('slug', x.get('raw_name').lower().replace(" ","-")) for x in rule)
 
     # clean slug list to only include agencies in the schema
     # there are some bad metadata -- e.g., 'interim-rule', 'formal-comments-that-were-received-in-response-to-the-nprm-regarding'
@@ -505,7 +505,7 @@ def clean_agencies_column(df_input: DataFrame,
     slug_list_clean = [list(set(i for i in slug if i in schema)) for slug in slug_list]
     
     # check if data was extracted correctly; raise error if not
-    if not len(agencies_list)==len(slug_list_clean):
+    if not len(agencies_list) == len(slug_list_clean):
         raise Exception("Error extracting data from 'agencies' column.")
     else:
         # create new columns with restructured data
@@ -551,7 +551,7 @@ def clean_agencies_column(df_input: DataFrame,
         unique_parent_acronyms.append(acronyms)
     
     # check if results make sense; raise error if not
-    if not len(unique_parent_ids)==len(unique_parent_slugs)==len(unique_parent_acronyms):
+    if not len(unique_parent_ids) == len(unique_parent_slugs) == len(unique_parent_acronyms):
         raise Exception("Error extracting unique data from 'agencies' column.")
         
     # create new columns with extracted data

@@ -1,17 +1,19 @@
 # Initialize
 from pathlib import Path
+from typing import Iterable
+
+import pandas as pd
 
 from federal_register_api import query_endpoint_documents, query_endpoint_agencies, AgencyMetadata
 from preprocessing import clean_agencies_column, column_to_date, clean_president_column
 from utils import load_json, save_json, load_csv, save_csv
 
-
 # create directories
 p = Path(__file__)
-raw_dir = p.parents[1].joinpath("data", "raw")
-processed_dir = p.parents[1].joinpath("data", "processed")
-analysis_dir = p.parents[1].joinpath("data", "analysis")
-for dir in (raw_dir, processed_dir, analysis_dir):
+RAW_DIR = p.parents[1].joinpath("data", "raw")
+PROCESSED_DIR = p.parents[1].joinpath("data", "processed")
+ANALYSIS_DIR = p.parents[1].joinpath("data", "analysis")
+for dir in (RAW_DIR, PROCESSED_DIR, ANALYSIS_DIR):
     if not dir.exists():
         try:
             dir.mkdir(parents=True)
@@ -25,19 +27,22 @@ FILE_AGENCIES_METADATA = r"agencies_endpoint_metadata.json"
 FILE_ALL_DATA_PROCESSED =  fr"documents_endpoint_{YEARS_RANGE[0]}_{YEARS_RANGE[-1]}.csv"
 
 
-def retrieve_documents(years, override_existing = False):
+def retrieve_documents(years: Iterable, 
+                       output_data: str, 
+                       raw_dir: str | Path, 
+                       override_existing: bool = False):
     """Retrieve and save documents from Federal Register API.
     """
     # check if already retrieved
     # don't make requests unless override is True or file does not exist
-    file_path = raw_dir / FILE_ALL_DATA_RAW
+    file_path = raw_dir / output_data
     if override_existing or not file_path.is_file():
         # retrieve data from API
         documents = query_endpoint_documents(years)
 
         # --------------------------------------------------
         # export json file
-        save_json(documents, FILE_ALL_DATA_RAW, raw_dir)
+        save_json(documents, output_data, raw_dir)
 
         # -------------------------------------------------- 
         # retrieve agencies metadata (for preprocessing)
@@ -47,13 +52,17 @@ def retrieve_documents(years, override_existing = False):
         agencies_metadata.save_json()
 
 
-def process_documents():
+def process_documents(input_metadata: str, 
+                      input_data: str, 
+                      output_data: str, 
+                      raw_dir: str | Path, 
+                      processed_dir: str | Path):
     """
     """
     pass
     # Load data
-    df = load_json(FILE_ALL_DATA_RAW, raw_dir)  # federal register documents
-    agencies_metadata = load_json(FILE_AGENCIES_METADATA, raw_dir)  # agencies metadata
+    agencies_metadata = load_json(input_metadata, raw_dir, has_metadata=False)  # agencies metadata
+    df = load_json(input_data, raw_dir)  # federal register documents
 
     # Data cleaning #
     
@@ -80,10 +89,18 @@ def process_documents():
         df[c] = df[c].apply(lambda x: "; ".join(str(i) for i in x))
 
     # Save processed data
-    save_csv(df, FILE_ALL_DATA_PROCESSED, processed_dir)
+    save_csv(df, output_data, processed_dir)
 
 
 if __name__ == "__main__":
-    retrieve_documents(YEARS_RANGE)
-    process_documents()
+    retrieve_documents(YEARS_RANGE, 
+                       FILE_ALL_DATA_RAW, 
+                       RAW_DIR
+                       )
+    process_documents(FILE_AGENCIES_METADATA, 
+                      FILE_ALL_DATA_RAW, 
+                      FILE_ALL_DATA_PROCESSED, 
+                      RAW_DIR, 
+                      PROCESSED_DIR
+                      )
 
