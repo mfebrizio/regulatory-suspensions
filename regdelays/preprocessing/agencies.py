@@ -526,7 +526,7 @@ def clean_agencies_column(df_input: DataFrame,
         # iterate over parent_ids for each document
         # return parent_id for sub-agencies and agency_id for agencies with no parent
         # currently returns intermediate parent for parent agencies with parents
-        ids= []
+        ids = []
         for s in d:
             if metadata[s].get("parent_id") is not None:
                 ids.append(metadata[s].get("parent_id"))

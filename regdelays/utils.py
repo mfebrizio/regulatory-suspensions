@@ -23,7 +23,7 @@ def load_csv(file_name: str,
     """    
     file_path = dir_path / file_name
     with open(file_path, "w", encoding="utf-8") as f:
-        df = read_csv(f, index=False, na_values=add_nans)
+        df = read_csv(f, index_col=False, na_values=add_nans)
     return df
 
 
@@ -76,7 +76,7 @@ def save_csv(df: DataFrame,
     """
     file_path = dir_path / file_name
     with open(file_path, "w", encoding="utf-8") as f:
-        df.to_csv(f, index=False, line_terminator=r"\n")
+        df.to_csv(f, index=False, lineterminator=r"\n")
 
 
 def save_json(obj, 
