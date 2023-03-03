@@ -1,7 +1,9 @@
-# import dependencies
-from datetime import date
+# standard library
 import json
+from datetime import date
 from pathlib import Path
+
+# third party libraries
 import requests
 
 
@@ -20,12 +22,6 @@ class AgencyMetadata:
     
     def transform(self):
         """Transform self.data from original format of iterable[dict] to dict[dict].
-        
-        Args:
-            self
-        
-        Returns:
-            None
         """        
         if self.transformed_data != {}:
             print("Metadata already transformed! Access it with self.transformed_data.")
@@ -48,7 +44,6 @@ class AgencyMetadata:
         """Save metadata on agencies from Federal Register API.
 
         Args:
-            self
             data_dir (Path, optional): Path for saving JSON. Defaults to Path(__file__).parents[1].joinpath("data", "raw").
             file_name (str, optional): File name to use when saving. Defaults to r"agencies_endpoint_metadata.json".
         
@@ -57,10 +52,10 @@ class AgencyMetadata:
         """
         # create dictionary of data with retrieval date
         dict_metadata = {"source": "Federal Register API, https://www.federalregister.gov/reader-aids/developer-resources/rest-api",
-                        "endpoint": r"https://www.federalregister.gov/api/v1/agencies.json",
-                        "date_retrieved": str(date.today()),
-                        "count": len(self.transformed_data), 
-                        "results": self.transformed_data
+                         "endpoint": r"https://www.federalregister.gov/api/v1/agencies.json",
+                         "date_retrieved": f"{date.today()}",
+                         "count": len(self.transformed_data), 
+                         "results": self.transformed_data
                         }
         # export json file
         file_path = data_dir / file_name
@@ -76,7 +71,7 @@ def query_endpoint_agencies(endpoint_url: str = r"https://www.federalregister.go
         endpoint_url (str, optional): Endpoint for retrieving agencies metadata. Defaults to r"https://www.federalregister.gov/api/v1/agencies.json".
 
     Raises:
-        Exception: Response status code if the request fails.
+        HTTPError: via requests package
 
     Returns:
         list[dict]: response object in JSON format
@@ -84,21 +79,22 @@ def query_endpoint_agencies(endpoint_url: str = r"https://www.federalregister.go
     # request documents; raise error if it fails
     agencies_response = requests.get(endpoint_url)
     if agencies_response.status_code != 200:
-        raise Exception(f"API request failed. Status code: {agencies_response.status_code}")
+        print(agencies_response.reason)
+        agencies_response.raise_for_status()
     
     # return response as json
     return agencies_response.json()
 
 
 def get_documents(endpoint_url: str, dict_params: dict):
-    """_summary_
+    """Send a GET request to retrieve documents from API endpoint.
 
     Args:
-        endpoint_url (str): _description_
-        dict_params (dict): _description_
+        endpoint_url (str): Retrieve documents from this endpoint.
+        dict_params (dict): Parameters to send with the request.
 
     Returns:
-        _type_: _description_
+        tuple[list, int]: Tuple of retrieved documents, count of documents.
     """
     dctsResults = []
     dctsCount = 0
@@ -206,7 +202,7 @@ def query_endpoint_documents(yearsList: list,
         
         # raise error if documents fitting criteria are not retrieved
         if len(dctsResults) != dctsCount:
-            raise Exception(f"Counts do not align for {year}: {len(dctsResults)}  =/= {dctsCount}")
+            raise Exception(f"Counts do not align for {year}: {len(dctsResults)} =/= {dctsCount}")
 
         # extend list of cumulative results and counts
         dctsResults_all.extend(dctsResults)
@@ -233,6 +229,4 @@ if __name__ == "__main__":
     agencies_metadata = AgencyMetadata(agencies_response)
     agencies_metadata.transform()
     agencies_metadata.save_json()
-else:
-    pass
 
