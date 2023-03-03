@@ -49,12 +49,13 @@ def load_json(file_name: str,
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     
+    # check if JSON object has metadata
+    if has_metadata:
+        data = data[data_key]
+        
     # determine what format to return data
     if as_dataframe:
-        if has_metadata:  # check if JSON object has metadata
-            df = DataFrame(data[data_key])
-        else:
-            df = DataFrame(data)
+        df = DataFrame(data)
         return df
     else:
         return data
