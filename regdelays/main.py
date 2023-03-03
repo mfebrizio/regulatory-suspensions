@@ -2,11 +2,11 @@
 from pathlib import Path
 from typing import Iterable
 
-import pandas as pd
+#import pandas as pd
 
-from federal_register_api import query_endpoint_documents, query_endpoint_agencies, AgencyMetadata
-from preprocessing import clean_agencies_column, column_to_date, clean_president_column
-from utils import load_json, save_json, load_csv, save_csv
+from .federal_register_api import query_endpoint_documents, query_endpoint_agencies, AgencyMetadata
+from .preprocessing import clean_agencies_column, column_to_date, clean_president_column, find_president_year_mismatches
+from .utils import load_json, save_json, load_csv, save_csv
 
 # create directories
 p = Path(__file__)
@@ -57,11 +57,10 @@ def process_documents(input_metadata: str,
                       output_data: str, 
                       raw_dir: str | Path, 
                       processed_dir: str | Path):
+    """Process documents retrieved from Federal Register API.
     """
-    """
-    pass
     # Load data
-    agencies_metadata = load_json(input_metadata, raw_dir, has_metadata=False)  # agencies metadata
+    agencies_metadata = load_json(input_metadata, raw_dir, as_dataframe=False, has_metadata=True)  # agencies metadata
     df = load_json(input_data, raw_dir)  # federal register documents
 
     # Data cleaning #
@@ -69,12 +68,16 @@ def process_documents(input_metadata: str,
     # filter out duplicates
     df = df.drop_duplicates(subset="document_number", keep="first")
     
-    # format dates; create column for year
+    # format dates; create column for year and month
     df.loc[:, "date"] = column_to_date(df, column="publication_date")
     df.loc[:, "year"] = df["date"].apply(lambda x: x.year)
+    df.loc[:, "month"] = df["date"].apply(lambda x: x.month)
     
     # clean president identifier
     df = clean_president_column(df)
+    
+    # find president-year mismatches
+    df = find_president_year_mismatches(df)
     
     # clean up agencies column from API
     if "agencies_id_unique" in df.columns:
@@ -86,13 +89,15 @@ def process_documents(input_metadata: str,
     df.loc[:, "agency_names"] = df["agency_names"].apply(lambda x: "; ".join(x))
     cols = ["agencies_slug_uq", "agencies_id_uq", "agencies_acronym_uq", "agency_slugs"]
     for c in cols:
-        df[c] = df[c].apply(lambda x: "; ".join(str(i) for i in x))
+        df[c] = df[c].apply(lambda x: "; ".join(f"{i}" for i in x))
 
     # Save processed data
     save_csv(df, output_data, processed_dir)
 
 
-if __name__ == "__main__":
+def main():
+    """Run the entire pipeline.
+    """
     retrieve_documents(YEARS_RANGE, 
                        FILE_ALL_DATA_RAW, 
                        RAW_DIR
@@ -103,4 +108,8 @@ if __name__ == "__main__":
                       RAW_DIR, 
                       PROCESSED_DIR
                       )
+
+
+if __name__ == "__main__":
+    main()
 
