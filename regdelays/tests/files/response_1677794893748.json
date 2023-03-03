@@ -1,0 +1,1968 @@
+{
+  "count": 109372,
+  "description": "Documents of type Rule",
+  "total_pages": 50,
+  "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Btype%5D%5B%5D=RULE&fields%5B%5D=agencies&format=json&order=newest&page=2&per_page=100",
+  "results": [
+    {
+      "agencies": [
+        {
+          "raw_name": "NUCLEAR REGULATORY COMMISSION",
+          "name": "Nuclear Regulatory Commission",
+          "id": 383,
+          "url": "https://www.federalregister.gov/agencies/nuclear-regulatory-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/383",
+          "parent_id": null,
+          "slug": "nuclear-regulatory-commission"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+          "name": "Health and Human Services Department",
+          "id": 221,
+          "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+          "parent_id": null,
+          "slug": "health-and-human-services-department"
+        },
+        {
+          "raw_name": "Food and Drug Administration",
+          "name": "Food and Drug Administration",
+          "id": 199,
+          "url": "https://www.federalregister.gov/agencies/food-and-drug-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/199",
+          "parent_id": 221,
+          "slug": "food-and-drug-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE INTERIOR",
+          "name": "Interior Department",
+          "id": 253,
+          "url": "https://www.federalregister.gov/agencies/interior-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+          "parent_id": null,
+          "slug": "interior-department"
+        },
+        {
+          "raw_name": "Bureau of Indian Affairs",
+          "name": "Indian Affairs Bureau",
+          "id": 234,
+          "url": "https://www.federalregister.gov/agencies/indian-affairs-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/234",
+          "parent_id": 253,
+          "slug": "indian-affairs-bureau"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        },
+        {
+          "raw_name": "Office of Foreign Assets Control",
+          "name": "Foreign Assets Control Office",
+          "id": 203,
+          "url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/203",
+          "parent_id": 497,
+          "slug": "foreign-assets-control-office"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        },
+        {
+          "raw_name": "Office of Foreign Assets Control",
+          "name": "Foreign Assets Control Office",
+          "id": 203,
+          "url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/203",
+          "parent_id": 497,
+          "slug": "foreign-assets-control-office"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "Coast Guard",
+          "name": "Coast Guard",
+          "id": 53,
+          "url": "https://www.federalregister.gov/agencies/coast-guard",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
+          "parent_id": 227,
+          "slug": "coast-guard"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Patent and Trademark Office",
+          "name": "Patent and Trademark Office",
+          "id": 402,
+          "url": "https://www.federalregister.gov/agencies/patent-and-trademark-office",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/402",
+          "parent_id": 54,
+          "slug": "patent-and-trademark-office"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF VETERANS AFFAIRS",
+          "name": "Veterans Affairs Department",
+          "id": 520,
+          "url": "https://www.federalregister.gov/agencies/veterans-affairs-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/520",
+          "parent_id": null,
+          "slug": "veterans-affairs-department"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE INTERIOR",
+          "name": "Interior Department",
+          "id": 253,
+          "url": "https://www.federalregister.gov/agencies/interior-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+          "parent_id": null,
+          "slug": "interior-department"
+        },
+        {
+          "raw_name": "Fish and Wildlife Service",
+          "name": "Fish and Wildlife Service",
+          "id": 197,
+          "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+          "parent_id": 253,
+          "slug": "fish-and-wildlife-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "National Oceanic and Atmospheric Administration",
+          "name": "National Oceanic and Atmospheric Administration",
+          "id": 361,
+          "url": "https://www.federalregister.gov/agencies/national-oceanic-and-atmospheric-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/361",
+          "parent_id": 54,
+          "slug": "national-oceanic-and-atmospheric-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Office of the Secretary"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "NATIONAL CREDIT UNION ADMINISTRATION",
+          "name": "National Credit Union Administration",
+          "id": 335,
+          "url": "https://www.federalregister.gov/agencies/national-credit-union-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/335",
+          "parent_id": null,
+          "slug": "national-credit-union-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT",
+          "name": "Housing and Urban Development Department",
+          "id": 228,
+          "url": "https://www.federalregister.gov/agencies/housing-and-urban-development-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/228",
+          "parent_id": null,
+          "slug": "housing-and-urban-development-department"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "Coast Guard",
+          "name": "Coast Guard",
+          "id": 53,
+          "url": "https://www.federalregister.gov/agencies/coast-guard",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
+          "parent_id": 227,
+          "slug": "coast-guard"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "Coast Guard",
+          "name": "Coast Guard",
+          "id": 53,
+          "url": "https://www.federalregister.gov/agencies/coast-guard",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
+          "parent_id": 227,
+          "slug": "coast-guard"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF LABOR",
+          "name": "Labor Department",
+          "id": 271,
+          "url": "https://www.federalregister.gov/agencies/labor-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+          "parent_id": null,
+          "slug": "labor-department"
+        },
+        {
+          "raw_name": "Office of Federal Contract Compliance Programs",
+          "name": "Federal Contract Compliance Programs Office",
+          "id": 162,
+          "url": "https://www.federalregister.gov/agencies/federal-contract-compliance-programs-office",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/162",
+          "parent_id": 271,
+          "slug": "federal-contract-compliance-programs-office"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "National Oceanic and Atmospheric Administration",
+          "name": "National Oceanic and Atmospheric Administration",
+          "id": 361,
+          "url": "https://www.federalregister.gov/agencies/national-oceanic-and-atmospheric-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/361",
+          "parent_id": 54,
+          "slug": "national-oceanic-and-atmospheric-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "National Oceanic and Atmospheric Administration",
+          "name": "National Oceanic and Atmospheric Administration",
+          "id": 361,
+          "url": "https://www.federalregister.gov/agencies/national-oceanic-and-atmospheric-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/361",
+          "parent_id": 54,
+          "slug": "national-oceanic-and-atmospheric-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF DEFENSE",
+          "name": "Defense Department",
+          "id": 103,
+          "url": "https://www.federalregister.gov/agencies/defense-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+          "parent_id": null,
+          "slug": "defense-department"
+        },
+        {
+          "raw_name": "Defense Acquisition Regulations System",
+          "name": "Defense Acquisition Regulations System",
+          "id": 97,
+          "url": "https://www.federalregister.gov/agencies/defense-acquisition-regulations-system",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/97",
+          "parent_id": 103,
+          "slug": "defense-acquisition-regulations-system"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF DEFENSE",
+          "name": "Defense Department",
+          "id": 103,
+          "url": "https://www.federalregister.gov/agencies/defense-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+          "parent_id": null,
+          "slug": "defense-department"
+        },
+        {
+          "raw_name": "Defense Acquisition Regulations System",
+          "name": "Defense Acquisition Regulations System",
+          "id": 97,
+          "url": "https://www.federalregister.gov/agencies/defense-acquisition-regulations-system",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/97",
+          "parent_id": 103,
+          "slug": "defense-acquisition-regulations-system"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF DEFENSE",
+          "name": "Defense Department",
+          "id": 103,
+          "url": "https://www.federalregister.gov/agencies/defense-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+          "parent_id": null,
+          "slug": "defense-department"
+        },
+        {
+          "raw_name": "Defense Acquisition Regulations System",
+          "name": "Defense Acquisition Regulations System",
+          "id": 97,
+          "url": "https://www.federalregister.gov/agencies/defense-acquisition-regulations-system",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/97",
+          "parent_id": 103,
+          "slug": "defense-acquisition-regulations-system"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF AGRICULTURE",
+          "name": "Agriculture Department",
+          "id": 12,
+          "url": "https://www.federalregister.gov/agencies/agriculture-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+          "parent_id": null,
+          "slug": "agriculture-department"
+        },
+        {
+          "raw_name": "Rural Utilities Service",
+          "name": "Rural Utilities Service",
+          "id": 460,
+          "url": "https://www.federalregister.gov/agencies/rural-utilities-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/460",
+          "parent_id": 12,
+          "slug": "rural-utilities-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF DEFENSE",
+          "name": "Defense Department",
+          "id": 103,
+          "url": "https://www.federalregister.gov/agencies/defense-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+          "parent_id": null,
+          "slug": "defense-department"
+        },
+        {
+          "raw_name": "Office of the Secretary"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT",
+          "name": "Housing and Urban Development Department",
+          "id": 228,
+          "url": "https://www.federalregister.gov/agencies/housing-and-urban-development-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/228",
+          "parent_id": null,
+          "slug": "housing-and-urban-development-department"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE INTERIOR",
+          "name": "Interior Department",
+          "id": 253,
+          "url": "https://www.federalregister.gov/agencies/interior-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+          "parent_id": null,
+          "slug": "interior-department"
+        },
+        {
+          "raw_name": "Fish and Wildlife Service",
+          "name": "Fish and Wildlife Service",
+          "id": 197,
+          "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+          "parent_id": 253,
+          "slug": "fish-and-wildlife-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Highway Administration",
+          "name": "Federal Highway Administration",
+          "id": 170,
+          "url": "https://www.federalregister.gov/agencies/federal-highway-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/170",
+          "parent_id": 492,
+          "slug": "federal-highway-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF LABOR",
+          "name": "Labor Department",
+          "id": 271,
+          "url": "https://www.federalregister.gov/agencies/labor-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+          "parent_id": null,
+          "slug": "labor-department"
+        },
+        {
+          "raw_name": "Employment and Training Administration",
+          "name": "Employment and Training Administration",
+          "id": 133,
+          "url": "https://www.federalregister.gov/agencies/employment-and-training-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/133",
+          "parent_id": 271,
+          "slug": "employment-and-training-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Patent and Trademark Office",
+          "name": "Patent and Trademark Office",
+          "id": 402,
+          "url": "https://www.federalregister.gov/agencies/patent-and-trademark-office",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/402",
+          "parent_id": 54,
+          "slug": "patent-and-trademark-office"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+          "name": "Federal Communications Commission",
+          "id": 161,
+          "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+          "parent_id": null,
+          "slug": "federal-communications-commission"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Bureau of Industry and Security",
+          "name": "Industry and Security Bureau",
+          "id": 241,
+          "url": "https://www.federalregister.gov/agencies/industry-and-security-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/241",
+          "parent_id": 54,
+          "slug": "industry-and-security-bureau"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Bureau of Industry and Security",
+          "name": "Industry and Security Bureau",
+          "id": 241,
+          "url": "https://www.federalregister.gov/agencies/industry-and-security-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/241",
+          "parent_id": 54,
+          "slug": "industry-and-security-bureau"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Bureau of Industry and Security",
+          "name": "Industry and Security Bureau",
+          "id": 241,
+          "url": "https://www.federalregister.gov/agencies/industry-and-security-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/241",
+          "parent_id": 54,
+          "slug": "industry-and-security-bureau"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Bureau of Industry and Security",
+          "name": "Industry and Security Bureau",
+          "id": 241,
+          "url": "https://www.federalregister.gov/agencies/industry-and-security-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/241",
+          "parent_id": 54,
+          "slug": "industry-and-security-bureau"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "SECURITIES AND EXCHANGE COMMISSION",
+          "name": "Securities and Exchange Commission",
+          "id": 466,
+          "url": "https://www.federalregister.gov/agencies/securities-and-exchange-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/466",
+          "parent_id": null,
+          "slug": "securities-and-exchange-commission"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF STATE",
+          "name": "State Department",
+          "id": 476,
+          "url": "https://www.federalregister.gov/agencies/state-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/476",
+          "parent_id": null,
+          "slug": "state-department"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+          "name": "Health and Human Services Department",
+          "id": 221,
+          "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+          "parent_id": null,
+          "slug": "health-and-human-services-department"
+        },
+        {
+          "raw_name": "Administration for Children and Families",
+          "name": "Children and Families Administration",
+          "id": 49,
+          "url": "https://www.federalregister.gov/agencies/children-and-families-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/49",
+          "parent_id": 221,
+          "slug": "children-and-families-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "Coast Guard",
+          "name": "Coast Guard",
+          "id": 53,
+          "url": "https://www.federalregister.gov/agencies/coast-guard",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
+          "parent_id": 227,
+          "slug": "coast-guard"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+          "name": "Federal Communications Commission",
+          "id": 161,
+          "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+          "parent_id": null,
+          "slug": "federal-communications-commission"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "National Oceanic and Atmospheric Administration",
+          "name": "National Oceanic and Atmospheric Administration",
+          "id": 361,
+          "url": "https://www.federalregister.gov/agencies/national-oceanic-and-atmospheric-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/361",
+          "parent_id": 54,
+          "slug": "national-oceanic-and-atmospheric-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+          "name": "National Aeronautics and Space Administration",
+          "id": 301,
+          "url": "https://www.federalregister.gov/agencies/national-aeronautics-and-space-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/301",
+          "parent_id": null,
+          "slug": "national-aeronautics-and-space-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "FEDERAL HOUSING FINANCE AGENCY",
+          "name": "Federal Housing Finance Agency",
+          "id": 174,
+          "url": "https://www.federalregister.gov/agencies/federal-housing-finance-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/174",
+          "parent_id": null,
+          "slug": "federal-housing-finance-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF LABOR",
+          "name": "Labor Department",
+          "id": 271,
+          "url": "https://www.federalregister.gov/agencies/labor-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+          "parent_id": null,
+          "slug": "labor-department"
+        },
+        {
+          "raw_name": "Employee Benefits Security Administration",
+          "name": "Employee Benefits Security Administration",
+          "id": 131,
+          "url": "https://www.federalregister.gov/agencies/employee-benefits-security-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/131",
+          "parent_id": 271,
+          "slug": "employee-benefits-security-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        },
+        {
+          "raw_name": "Office of Foreign Assets Control",
+          "name": "Foreign Assets Control Office",
+          "id": 203,
+          "url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/203",
+          "parent_id": 497,
+          "slug": "foreign-assets-control-office"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        },
+        {
+          "raw_name": "Office of Foreign Assets Control",
+          "name": "Foreign Assets Control Office",
+          "id": 203,
+          "url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/203",
+          "parent_id": 497,
+          "slug": "foreign-assets-control-office"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE INTERIOR",
+          "name": "Interior Department",
+          "id": 253,
+          "url": "https://www.federalregister.gov/agencies/interior-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+          "parent_id": null,
+          "slug": "interior-department"
+        },
+        {
+          "raw_name": "Bureau of Land Management",
+          "name": "Land Management Bureau",
+          "id": 275,
+          "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+          "parent_id": 253,
+          "slug": "land-management-bureau"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        },
+        {
+          "raw_name": "Internal Revenue Service",
+          "name": "Internal Revenue Service",
+          "id": 254,
+          "url": "https://www.federalregister.gov/agencies/internal-revenue-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/254",
+          "parent_id": 497,
+          "slug": "internal-revenue-service"
+        },
+        {
+          "raw_name": "DEPARTMENT OF LABOR",
+          "name": "Labor Department",
+          "id": 271,
+          "url": "https://www.federalregister.gov/agencies/labor-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+          "parent_id": null,
+          "slug": "labor-department"
+        },
+        {
+          "raw_name": "Employee Benefits Security Administration",
+          "name": "Employee Benefits Security Administration",
+          "id": 131,
+          "url": "https://www.federalregister.gov/agencies/employee-benefits-security-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/131",
+          "parent_id": 271,
+          "slug": "employee-benefits-security-administration"
+        },
+        {
+          "raw_name": "PENSION BENEFIT GUARANTY CORPORATION",
+          "name": "Pension Benefit Guaranty Corporation",
+          "id": 405,
+          "url": "https://www.federalregister.gov/agencies/pension-benefit-guaranty-corporation",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/405",
+          "parent_id": null,
+          "slug": "pension-benefit-guaranty-corporation"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Bureau of Industry and Security",
+          "name": "Industry and Security Bureau",
+          "id": 241,
+          "url": "https://www.federalregister.gov/agencies/industry-and-security-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/241",
+          "parent_id": 54,
+          "slug": "industry-and-security-bureau"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "COMMODITY FUTURES TRADING COMMISSION",
+          "name": "Commodity Futures Trading Commission",
+          "id": 77,
+          "url": "https://www.federalregister.gov/agencies/commodity-futures-trading-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/77",
+          "parent_id": null,
+          "slug": "commodity-futures-trading-commission"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF AGRICULTURE",
+          "name": "Agriculture Department",
+          "id": 12,
+          "url": "https://www.federalregister.gov/agencies/agriculture-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+          "parent_id": null,
+          "slug": "agriculture-department"
+        },
+        {
+          "raw_name": "Animal and Plant Health Inspection Service",
+          "name": "Animal and Plant Health Inspection Service",
+          "id": 22,
+          "url": "https://www.federalregister.gov/agencies/animal-and-plant-health-inspection-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/22",
+          "parent_id": 12,
+          "slug": "animal-and-plant-health-inspection-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "Coast Guard",
+          "name": "Coast Guard",
+          "id": 53,
+          "url": "https://www.federalregister.gov/agencies/coast-guard",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
+          "parent_id": 227,
+          "slug": "coast-guard"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "National Oceanic and Atmospheric Administration",
+          "name": "National Oceanic and Atmospheric Administration",
+          "id": 361,
+          "url": "https://www.federalregister.gov/agencies/national-oceanic-and-atmospheric-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/361",
+          "parent_id": 54,
+          "slug": "national-oceanic-and-atmospheric-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "U.S. Customs and Border Protection",
+          "name": "U.S. Customs and Border Protection",
+          "id": 501,
+          "url": "https://www.federalregister.gov/agencies/u-s-customs-and-border-protection",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/501",
+          "parent_id": 227,
+          "slug": "u-s-customs-and-border-protection"
+        },
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "U.S. Customs and Border Protection",
+          "name": "U.S. Customs and Border Protection",
+          "id": 501,
+          "url": "https://www.federalregister.gov/agencies/u-s-customs-and-border-protection",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/501",
+          "parent_id": 227,
+          "slug": "u-s-customs-and-border-protection"
+        },
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "National Oceanic and Atmospheric Administration",
+          "name": "National Oceanic and Atmospheric Administration",
+          "id": 361,
+          "url": "https://www.federalregister.gov/agencies/national-oceanic-and-atmospheric-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/361",
+          "parent_id": 54,
+          "slug": "national-oceanic-and-atmospheric-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        },
+        {
+          "raw_name": "Internal Revenue Service",
+          "name": "Internal Revenue Service",
+          "id": 254,
+          "url": "https://www.federalregister.gov/agencies/internal-revenue-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/254",
+          "parent_id": 497,
+          "slug": "internal-revenue-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE TREASURY",
+          "name": "Treasury Department",
+          "id": 497,
+          "url": "https://www.federalregister.gov/agencies/treasury-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+          "parent_id": null,
+          "slug": "treasury-department"
+        },
+        {
+          "raw_name": "Internal Revenue Service",
+          "name": "Internal Revenue Service",
+          "id": 254,
+          "url": "https://www.federalregister.gov/agencies/internal-revenue-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/254",
+          "parent_id": 497,
+          "slug": "internal-revenue-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF TRANSPORTATION",
+          "name": "Transportation Department",
+          "id": 492,
+          "url": "https://www.federalregister.gov/agencies/transportation-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+          "parent_id": null,
+          "slug": "transportation-department"
+        },
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF DEFENSE",
+          "name": "Defense Department",
+          "id": 103,
+          "url": "https://www.federalregister.gov/agencies/defense-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+          "parent_id": null,
+          "slug": "defense-department"
+        },
+        {
+          "raw_name": "Office of the Secretary"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+          "name": "Federal Communications Commission",
+          "id": 161,
+          "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+          "parent_id": null,
+          "slug": "federal-communications-commission"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF VETERANS AFFAIRS",
+          "name": "Veterans Affairs Department",
+          "id": 520,
+          "url": "https://www.federalregister.gov/agencies/veterans-affairs-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/520",
+          "parent_id": null,
+          "slug": "veterans-affairs-department"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF AGRICULTURE",
+          "name": "Agriculture Department",
+          "id": 12,
+          "url": "https://www.federalregister.gov/agencies/agriculture-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+          "parent_id": null,
+          "slug": "agriculture-department"
+        },
+        {
+          "raw_name": "Rural Utilities Service",
+          "name": "Rural Utilities Service",
+          "id": 460,
+          "url": "https://www.federalregister.gov/agencies/rural-utilities-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/460",
+          "parent_id": 12,
+          "slug": "rural-utilities-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF AGRICULTURE",
+          "name": "Agriculture Department",
+          "id": 12,
+          "url": "https://www.federalregister.gov/agencies/agriculture-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+          "parent_id": null,
+          "slug": "agriculture-department"
+        },
+        {
+          "raw_name": "Animal and Plant Health Inspection Service",
+          "name": "Animal and Plant Health Inspection Service",
+          "id": 22,
+          "url": "https://www.federalregister.gov/agencies/animal-and-plant-health-inspection-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/22",
+          "parent_id": 12,
+          "slug": "animal-and-plant-health-inspection-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF THE INTERIOR",
+          "name": "Interior Department",
+          "id": 253,
+          "url": "https://www.federalregister.gov/agencies/interior-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+          "parent_id": null,
+          "slug": "interior-department"
+        },
+        {
+          "raw_name": "Office of the Secretary"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF AGRICULTURE",
+          "name": "Agriculture Department",
+          "id": 12,
+          "url": "https://www.federalregister.gov/agencies/agriculture-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+          "parent_id": null,
+          "slug": "agriculture-department"
+        },
+        {
+          "raw_name": "Animal and Plant Health Inspection Service",
+          "name": "Animal and Plant Health Inspection Service",
+          "id": 22,
+          "url": "https://www.federalregister.gov/agencies/animal-and-plant-health-inspection-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/22",
+          "parent_id": 12,
+          "slug": "animal-and-plant-health-inspection-service"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "name": "Environmental Protection Agency",
+          "id": 145,
+          "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+          "parent_id": null,
+          "slug": "environmental-protection-agency"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "EXECUTIVE OFFICE OF THE PRESIDENT",
+          "name": "Executive Office of the President",
+          "id": 538,
+          "url": "https://www.federalregister.gov/agencies/executive-office-of-the-president",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/538",
+          "parent_id": null,
+          "slug": "executive-office-of-the-president"
+        },
+        {
+          "raw_name": "Office of the Intellectual Property Enforcement Coordinator",
+          "name": "Intellectual Property Enforcement Coordinator Office",
+          "id": 611,
+          "url": "https://www.federalregister.gov/agencies/intellectual-property-enforcement-coordinator-office",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/611",
+          "parent_id": 538,
+          "slug": "intellectual-property-enforcement-coordinator-office"
+        }
+      ]
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF AGRICULTURE",
+          "name": "Agriculture Department",
+          "id": 12,
+          "url": "https://www.federalregister.gov/agencies/agriculture-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+          "parent_id": null,
+          "slug": "agriculture-department"
+        },
+        {
+          "raw_name": "Rural Utilities Service",
+          "name": "Rural Utilities Service",
+          "id": 460,
+          "url": "https://www.federalregister.gov/agencies/rural-utilities-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/460",
+          "parent_id": 12,
+          "slug": "rural-utilities-service"
+        }
+      ]
+    }
+  ]
+}
