@@ -18,6 +18,7 @@ from .dates import (
     columns_to_date
     )
 from .presidents import (
-    clean_president_column
+    clean_president_column, 
+    find_president_year_mismatches
     )
 

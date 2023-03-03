@@ -466,7 +466,7 @@ DEFAULT_AGENCY_SCHEMA = [
 
 def clean_agencies_column(df_input: DataFrame, 
                           metadata: dict, 
-                          column: str = "agencies", 
+                          columns: tuple[str] = ("agencies", "agency_names"), 
                           schema: list = DEFAULT_AGENCY_SCHEMA
                           ):
     """Clean 'agencies' data from API and return dataframe with new columns.
@@ -490,14 +490,15 @@ def clean_agencies_column(df_input: DataFrame,
     df = df_input.copy(deep=True)
     
     # create list of agencies data
-    agencies_list = df[column].tolist()
-    
-    # empty lists for results
-    slug_list = []
+    agencies_list = df[columns[0]].values.tolist()
+    backup_list = df[columns[1]].values.tolist()
+    #print(agencies_list[0:10], backup_list[0:10])
     
     # loop over documents and extract agencies data
-    for rule in agencies_list:
-        slug_list.append(x.get('slug', x.get('raw_name').lower().replace(" ","-")) for x in rule)
+    slug_list = []  # empty lists for results
+    for row, backup in zip(agencies_list, backup_list):
+        #print(len(row), len(backup))
+        slug_list.append(r.get("slug", r.get("name", f"{b}").lower().replace(" ","-")) for r, b in zip(row, backup))
 
     # clean slug list to only include agencies in the schema
     # there are some bad metadata -- e.g., 'interim-rule', 'formal-comments-that-were-received-in-response-to-the-nprm-regarding'
@@ -507,18 +508,15 @@ def clean_agencies_column(df_input: DataFrame,
     # check if data was extracted correctly; raise error if not
     if not len(agencies_list) == len(slug_list_clean):
         raise Exception("Error extracting data from 'agencies' column.")
-    else:
-        # create new columns with restructured data
+    else:  # create new columns with restructured data
         df.loc[:,'agency_slugs'] = slug_list_clean
     
     # 2) generate two columns with unique top-level agency metadata:
     # a. list of unique top-level ids (i.e., parent_id for sub-agencies and agency_id for agencies without a parent)
-    # b. list of slugs that correspond to the top-level ids
+    # b. list of slugs and list of acronyms that correspond to the top-level ids
     
     # create empty lists for results
-    unique_parent_ids = []
-    unique_parent_slugs = []
-    unique_parent_acronyms = []
+    unique_parent_ids, unique_parent_slugs, unique_parent_acronyms = [], [], []
     
     # iterate over list of clean agency slugs
     for d in slug_list_clean:
@@ -535,31 +533,28 @@ def clean_agencies_column(df_input: DataFrame,
         ids = list(set(ids))  # use set() to keep only unique ids
         unique_parent_ids.append(ids)  # append to results list (a)
         
-        # b) create new column: list of unique top-level slugs
+        # b) create 2 new columns: list of unique top-level slugs; list of unique acronyms
         # iterate over each document's unique_parent_ids
         # return slug for corresponding id from FR API's agencies endpoint
-        slugs = []
+        slugs, acronyms = [], []
         for i in ids:
             # locate slug for each input id from agencies endpoint metadata
-            slugs.extend(k for k,v in metadata.items() if v.get("id")==i)
-        unique_parent_slugs.append(slugs)  # append to results list (b)
-        
-        # c) create new column: list of unique acronyms
-        acronyms = []
-        for i in ids:
+            slugs.extend(k for k, v in metadata.items() if v.get("id")==i)
+            # locate acronym
             acronyms.extend(v.get("short_name") for v in metadata.values() if v.get("id")==i)
+        # append to results list (b)
+        unique_parent_slugs.append(slugs)
         unique_parent_acronyms.append(acronyms)
     
     # check if results make sense; raise error if not
     if not len(unique_parent_ids) == len(unique_parent_slugs) == len(unique_parent_acronyms):
         raise Exception("Error extracting unique data from 'agencies' column.")
-        
-    # create new columns with extracted data
-    df.loc[:, "agencies_id_uq"] = unique_parent_ids
-    df.loc[:, "agencies_slug_uq"] = unique_parent_slugs
-    df.loc[:, "agencies_acronym_uq"] = unique_parent_acronyms
+    else:  # create new columns with extracted data
+        df.loc[:, "agencies_id_uq"] = unique_parent_ids
+        df.loc[:, "agencies_slug_uq"] = unique_parent_slugs
+        df.loc[:, "agencies_acronym_uq"] = unique_parent_acronyms
     
-    # 4) reorder columns
+    # 3) reorder columns
     new_cols = ["agency_slugs", "agencies_id_uq", "agencies_slug_uq", "agencies_acronym_uq"]  # new columns added
     col_list = df_input.columns.tolist()  # original columns from df_input
     index_loc = col_list.index("agencies") + 1  # locate element after "agencies" column
