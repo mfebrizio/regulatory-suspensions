@@ -22,7 +22,7 @@ def load_csv(file_name: str,
         DataFrame: Pandas DataFrame object containing the data.
     """    
     file_path = dir_path / file_name
-    with open(file_path, "w", encoding="utf-8") as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         df = read_csv(f, index_col=False, na_values=add_nans)
     return df
 
