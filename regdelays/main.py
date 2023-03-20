@@ -6,6 +6,7 @@ from typing import Iterable
 
 from .federal_register_api import query_endpoint_documents, query_endpoint_agencies, AgencyMetadata
 from .preprocessing import clean_agencies_column, column_to_date, clean_president_column, find_president_year_mismatches
+from .search_columns import search_columns
 from .utils import load_json, save_json, load_csv, save_csv
 
 # create directories
@@ -25,6 +26,9 @@ YEARS_RANGE = range(1994, 2023)
 FILE_ALL_DATA_RAW = fr"documents_endpoint_{YEARS_RANGE[0]}_{YEARS_RANGE[-1]}.json"
 FILE_AGENCIES_METADATA = r"agencies_endpoint_metadata.json"
 FILE_ALL_DATA_PROCESSED =  fr"documents_endpoint_{YEARS_RANGE[0]}_{YEARS_RANGE[-1]}.csv"
+REGEX_PATTERN = r"""(?:(?<=\bdelay).+\b(?:compliance|effective)\sdate\b) 
+                    | (?:\b(?:compliance|effective)\sdate\b.+(?=\bdelay))
+                    """
 
 
 def retrieve_documents(years: Iterable, 
@@ -80,19 +84,34 @@ def process_documents(input_metadata: str,
     df = find_president_year_mismatches(df)
     
     # clean up agencies column from API
-    if "agencies_id_unique" in df.columns:
-        pass
-    else:
+    cols = ["agencies_slug_uq", "agencies_id_uq", "agencies_acronym_uq", "agency_slugs"]
+    cols_exist = (True if c in df.columns else False for c in cols)
+    if not any(cols_exist):
         df = clean_agencies_column(df, metadata=agencies_metadata)
     
     # clean agency info for export
     df.loc[:, "agency_names"] = df["agency_names"].apply(lambda x: "; ".join(x))
-    cols = ["agencies_slug_uq", "agencies_id_uq", "agencies_acronym_uq", "agency_slugs"]
     for c in cols:
         df[c] = df[c].apply(lambda x: "; ".join(f"{i}" for i in x))
 
     # Save processed data
     save_csv(df, output_data, processed_dir)
+    
+    # return data for further analysis
+    return df
+
+
+def identify_suspensions(df, pattern, 
+                         time_period):
+    
+    if time_period:
+        pass
+    
+    df_out = search_columns(df, 
+                            patterns=[pattern], 
+                            columns=["title", "action", "dates"]
+                            )
+    return df_out
 
 
 def main():
@@ -102,12 +121,13 @@ def main():
                        FILE_ALL_DATA_RAW, 
                        RAW_DIR
                        )
-    process_documents(FILE_AGENCIES_METADATA, 
-                      FILE_ALL_DATA_RAW, 
-                      FILE_ALL_DATA_PROCESSED, 
-                      RAW_DIR, 
-                      PROCESSED_DIR
-                      )
+    df = process_documents(FILE_AGENCIES_METADATA, 
+                           FILE_ALL_DATA_RAW, 
+                           FILE_ALL_DATA_PROCESSED, 
+                           RAW_DIR, 
+                           PROCESSED_DIR
+                           )
+    identify_suspensions(df, REGEX_PATTERN)
 
 
 if __name__ == "__main__":
